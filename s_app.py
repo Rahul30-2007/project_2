@@ -168,11 +168,12 @@ def main():
             )
         
         with col2:
-            end_date = st.date_input(
-                "End Date",
-                value=datetime.now() - timedelta(days=1),
-                max_value=datetime.now()
-            )
+           end_date = st.date_input(
+             "End Date",
+             value=datetime.now().date(),  # Use today's date
+             max_value=datetime.now().date()
+         )
+
         
         # Model parameters
         st.subheader("🤖 Model Parameters")
